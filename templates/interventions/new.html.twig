@@ -12,51 +12,55 @@
     <table class="table">
     {{ form_start(form,{attr:{novalidate:'novalidate'}}) }}
         <tbody>
+        <br>
+        <br>
+        <br>
+        <br>
             <tr>
                 <th>Au Service</th>
                 <td>{{ form_widget(form.au_service) }}</td>
             </tr>
             <tr>
-                <th>service_demandeur</th>
+                <th>Service Demandeur</th>
                 <td>{{ form_widget(form.service_demandeur) }}
                 <div class="text-danger">{{ form_errors(form.service_demandeur) }}</div></td>
             </tr>
             <tr>
-                <th>code_imp</th>
+                <th>Code Imputation</th>
                 <td>{{ form_widget(form.code_imp) }}
                 <div class="text-danger">{{ form_errors(form.code_imp) }}</div></td>
             </tr>
             <tr>
-                <th>reference</th>
+                <th>Reference</th>
                 <td>{{ form_widget(form.reference) }}</td>
                 <div class="text-danger">{{ form_errors(form.reference) }}</div></td>
             </tr>
             <tr>
-                <th>date</th>
+                <th>Date</th>
                 <td>{{ form_widget(form.date) }}</td>
                 <div class="text-danger">{{ form_errors(form.date) }}</div></td>
             </tr>
             <tr>
-                <th>batiment</th>
+                <th>Batiment</th>
                 <td>{{ form_widget(form.batiment) }}</td>
                 <div class="text-danger">{{ form_errors(form.batiment) }}</div></td>
             </tr>
             <tr>
-                <th>local</th>
+                <th>Local</th>
                 <td>{{ form_widget(form.local) }}</td>
                 <div class="text-danger">{{ form_errors(form.local) }}</div></td>
             </tr>
             <tr>
-                <th>description</th>
+                <th>Description</th>
                 <td>{{ form_widget(form.description) }}</td>
                 <div class="text-danger">{{ form_errors(form.description) }}</div></td>
             </tr>
             <tr>
-                <th>piece_jointe</th>
+                <th>Piece Jointe</th>
                 <td>{{ form_widget(form.piece_jointe) }}</td>
             </tr>
             <tr>
-                <th>deg_urgence</th>
+                <th>Degré d'urgence</th>
                 <td>{{ form_widget(form.deg_urgence) }}</td>
                 <div class="text-danger">{{ form_errors(form.deg_urgence) }}</div></td>
             </tr>
