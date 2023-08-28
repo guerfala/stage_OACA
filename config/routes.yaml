@@ -1,3 +1,23 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+app_interventions_new:
+    path: /{id_agent}/new
+    controller: App\Controller\InterventionsController::new
+
+login:
+    path: /login
+    controller: App\Controller\LoginController::login
+
+profilag:
+    path: /{id_agent}/profilag
+    controller: App\Controller\AgentsController::profil
+
+app_interventions_front:
+    path: /{id_agent}/front
+    controller: App\Controller\InterventionsController::front
+
+app_dashboard:
+    path: /dashboard
+    controller: App\Controller\DashboardController::index

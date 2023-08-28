@@ -1,0 +1,57 @@
+{% extends "frontbase.html.twig" %}
+
+{% block title %}Interventions{% endblock %}
+
+{% block body %}
+<br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+  <center><h1>Interventions list </h1></center>
+  <br>
+
+    <table class="table table-hover">
+        <thead>
+        
+            <tr class="table-info">
+                <th></th>
+                <th></th>
+                <th scope="col">#</th>
+                <th>Au service</th>
+                <th>Service demandeur</th>
+                <th>Reference</th>
+                <th>Date_creation</th>
+                <th>Etat</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for intervention in interventions %}
+            <tr>
+                <td></td>
+                <td></td>
+                <td>{{ loop.index }}</td>
+                <td>{{ intervention.au_service }}</td>
+                <td>{{ intervention.service_demandeur }}</td>
+                <td>{{ intervention.reference }}</td>
+                <td>{{ intervention.date ? intervention.date|date('Y-m-d') : '' }}</td>
+                <td>{{ intervention.etat }}</td>
+
+
+                
+                </td>
+                
+
+
+                </tr>
+                 {% else %}
+                <tr>
+                    <td colspan="5">no records found</td>
+                </tr>
+                {% endfor %}
+        </tbody>
+    </table>
+
+<center><a href="{{ path('app_interventions_new', {'id_agent' : id_agent}) }}"><button type="button" class="btn btn-outline-info">Create new</a></center>
+{% endblock %}
