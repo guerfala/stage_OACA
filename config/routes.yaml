@@ -21,3 +21,23 @@ app_interventions_front:
 app_dashboard:
     path: /dashboard
     controller: App\Controller\DashboardController::index
+
+app_interventions_index:
+    path: /index
+    controller: App\Controller\InterventionsController::index
+
+app_interventions_delete:
+    path: /{id}/delete
+    controller: App\Controller\InterventionsController::delete
+
+app_interventions_traite:
+    path: /{id}/traite
+    controller: App\Controller\InterventionsController::traite
+
+app_interventions_search:
+    path: /search
+    controller: App\Controller\InterventionsController::search
+
+app_interventions_show:
+    path: /{id}/intervention
+    controller: App\Controller\InterventionsController::show

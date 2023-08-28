@@ -20,7 +20,7 @@ class AgentsController extends AbstractController
         ]);
     }
 
-    #[Route('/{id_agent}/profilag', name: 'profilag')]
+    #[Route('/profilag/{id_agent}', name: 'profilag')]
     public function profil(int $id_agent): Response
     {
         return $this->render('agents/profil.html.twig', [

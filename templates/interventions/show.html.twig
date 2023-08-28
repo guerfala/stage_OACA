@@ -1,0 +1,56 @@
+{% extends 'backbase.html.twig' %}
+
+{% block title %}Interventions{% endblock %}
+
+{% block body %}
+<main id="main" class="main">
+    <h1>Interventions</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ intervention.id }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ intervention.au_service }}</td>
+            </tr>
+            <tr>
+                <th>Commentaire</th>
+                <td>{{ intervention.service_demandeur }}</td>
+            </tr>
+            <tr>
+                <th>Reference</th>
+                <td>{{ intervention.reference }}</td>
+            </tr>
+            <tr>
+                <th>Date_creation</th>
+                <td>{{ intervention.date ? intervention.date|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Etat</th>
+                <td>{{ intervention.etat }}</td>
+            </tr>
+            
+
+            <tr>
+                                    <th>Scan this code if you like</th>
+                                    <th>
+                                        <img src="{{ qr }}" alt="QR code" style="height:20%;width:15%"/>
+                                    </th>
+                                </tr>
+                              <tr>
+                                  
+                                    <th>
+                                         {{ include('interventions/_delete_form.html.twig') }}
+                                    </th>
+                                </tr>
+        </tbody>
+    </table>
+
+   
+<br><br>
+    <a href="{{ path('app_interventions_index') }}"><button type="button" class="btn btn-secondary">Back to list</button></a>
+    </main>
+{% endblock %}

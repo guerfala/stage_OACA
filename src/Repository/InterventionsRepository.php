@@ -39,6 +39,16 @@ class InterventionsRepository extends ServiceEntityRepository
         }
     }
 
+    public function searchBynom($value)
+    {
+        return $this->createQueryBuilder('e')
+            ->where('e.au_service LIKE :value OR e.service_demandeur LIKE :value OR e.reference LIKE :value OR e.etat LIKE :value  ')
+            ->setParameter('value', '%'.$value.'%')
+            ->orderBy('e.id', 'ASC')
+            ->getQuery()
+            ->getResult();
+    }
+
 //    /**
 //     * @return Interventions[] Returns an array of Interventions objects
 //     */
